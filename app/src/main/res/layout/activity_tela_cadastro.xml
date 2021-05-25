@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/cadastroLabel"
@@ -49,6 +50,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="174dp"
         android:layout_marginRight="17dp"
+        android:hint="Nome"
+        android:textColorHint="#bbb"
+        android:textSizeHint="20dp"
         android:ems="10"
         android:inputType="text" />
 
@@ -107,6 +111,87 @@
         android:layout_marginRight="15dp"
         android:ems="10"
         android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/ouLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/senhaCadastroCampo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="459dp"
+        android:layout_marginRight="-172dp"
+        android:text="Ou"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/acessoRedeSocialLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/senhaCadastroCampo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="107dp"
+        android:layout_marginTop="478dp"
+        android:layout_marginRight="-75dp"
+        android:text="Acesse via rede social"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/cadastrar"
+        android:layout_width="461dp"
+        android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="577dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="158dp"
+        android:background="#4169E1"
+        android:borderRadius="20dp"
+        android:text="Cadastrar"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp" />
+
+    <ImageButton
+        android:id="@+id/cadastroFacebook"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="230dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="520dp"
+        android:clipToOutline="true"
+        android:src="@drawable/logo_facebook" />
+
+    <ImageButton
+        android:id="@+id/cadastroGoogle"
+        android:layout_width="73dp"
+        android:layout_height="66dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="514dp"
+        android:clipToOutline="true"
+        android:src="@drawable/logo_google" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        android:textColor="#4169E1"
+        android:textSize="20dp"
+        android:text="Já tem cadastro? Então faça Login" />
 
 
 </RelativeLayout>

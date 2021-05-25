@@ -1,8 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,23 +17,54 @@
 
         <LinearLayout
             android:id="@+id/fundo_azul"
-            android:layout_width="411dp"
-            android:layout_height="267dp"
+            android:layout_width="422dp"
+            android:layout_height="245dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="-1dp"
             android:layout_marginTop="-24dp"
             android:background="#4169E1"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="32dp"
+                android:src="@drawable/icone_perfil" />
+
+            <TextView
+                android:id="@+id/nomePerfilLabel"
+                android:layout_width="342dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="32dp"
+                android:text="Olá, "
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/nomePerfilLabel"
-            style="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="126dp"
-            android:text="Nome:"
-            android:textColor="@android:color/black" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="16dp"
+            android:text="Como você está se sentindo?"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="25dp" />
 
 
     </LinearLayout>
