@@ -150,15 +150,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="577dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="158dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="79dp"
         android:background="@drawable/style_btn"
         android:borderRadius="20dp"
-        android:textAlignment="center"
         android:gravity="center_horizontal|top"
         android:text="Cadastrar"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="25dp" />
 
@@ -188,12 +188,12 @@
         android:id="@+id/button2"
         android:layout_width="320dp"
         android:layout_height="25dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="45dp"
+        android:text="Já tem cadastro? Então faça Login"
         android:textColor="#4169E1"
-        android:textSize="20dp"
-        android:text="Já tem cadastro? Então faça Login" />
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
