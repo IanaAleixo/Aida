@@ -50,9 +50,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="174dp"
         android:layout_marginRight="17dp"
-        android:hint="Nome"
-        android:textColorHint="#bbb"
         android:textSizeHint="20dp"
+        android:background="@drawable/style_edit_text"
         android:ems="10"
         android:inputType="text" />
 
@@ -78,9 +77,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="291dp"
-        android:layout_marginRight="22dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/style_edit_text"
         android:ems="10"
         android:inputType="textEmailAddress" />
 
@@ -91,9 +91,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginRight="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="356dp"
+        android:layout_marginRight="19dp"
         android:text="Senha:"
         android:textColor="@android:color/black"
         android:textSize="20dp"
@@ -107,8 +107,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="405dp"
+        android:layout_marginTop="390dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/style_edit_text"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -153,10 +154,11 @@
         android:layout_marginTop="577dp"
         android:layout_marginRight="17dp"
         android:layout_marginBottom="158dp"
-        android:background="#4169E1"
+        android:background="@drawable/style_btn"
         android:borderRadius="20dp"
-        android:text="Cadastrar"
         android:textAlignment="center"
+        android:gravity="center_horizontal|top"
+        android:text="Cadastrar"
         android:textColor="@android:color/white"
         android:textSize="25dp" />
 
