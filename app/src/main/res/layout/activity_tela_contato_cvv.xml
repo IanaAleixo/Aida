@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/fundo_azul_cvv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4169E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fundo_branco_cvv"
+            android:layout_width="380dp"
+            android:layout_height="508dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:text="CVV"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textoCvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:text="O CVV – Centro de Valorização da Vida realiza apoio emocional e prevenção do suicídio,
+                atendendo voluntária e gratuitamente todas as pessoas que querem e precisam conversar,
+                sob total sigilo por telefone,
+                email e chat 24 horas todos os dias."
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <vector
+                android:width="343dp"
+                android:height="37.86dp"
+                android:viewportWidth="343"
+                android:viewportHeight="37.86"
+                >
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
