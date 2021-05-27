@@ -72,6 +72,45 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/icone_lapis"
+            android:text="Editar perfil"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnConfiguracao"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/icone_configuracao"
+            android:text="Configuração"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnVerRelatorios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/icone_grafico"
+            android:text="Visualizar Relatórios"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/icone_logoff"
+            android:text="Sair"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
