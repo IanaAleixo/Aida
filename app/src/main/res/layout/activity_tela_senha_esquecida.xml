@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/fundo_azul"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4169E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fundo_branco"
+            android:layout_width="380dp"
+            android:layout_height="470dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/novaSenhaLabel"
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="78dp"
+                android:layout_marginRight="59dp"
+                android:text="Nova senha"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/novaSenhaCampoEsq"
+                android:layout_width="285dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:inputType="textPassword"/>
+
+            <TextView
+                android:id="@+id/confirmarSenhaLabel"
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Confirmar senha"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/confirmarSenhaCampoEsq"
+                android:layout_width="285dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/btnAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="73dp"
+                android:layout_marginRight="15dp"
+                android:text="Alterar"
+                android:background="@drawable/style_btn"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
