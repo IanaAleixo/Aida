@@ -7,7 +7,7 @@
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/fundo_azul_bv"
+        android:id="@+id/fundo_azul"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_branco_bv"
+            android:id="@+id/fundo_branco"
             android:layout_width="380dp"
             android:layout_height="363dp"
             android:layout_alignParentLeft="true"
@@ -55,8 +55,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="32dp"
                 android:gravity="center_horizontal|top"
-                android:text="Aqui haverá um texto explicando o objetivo do App,
-                seus beneficios e suas limitações"
+                android:text="Aqui haverá um texto explicando o objetivo do App, seus beneficios e suas limitações"
                 android:textColor="@android:color/black"
                 android:textSize="20dp" />
 
