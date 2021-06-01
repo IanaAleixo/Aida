@@ -102,7 +102,7 @@
                 android:layout_marginLeft="27dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="59dp"
-                android:text="Confirmar senha"
+                android:text="Confirmar nova senha"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -122,7 +122,7 @@
                 android:inputType="textPassword"/>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnAlterar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
