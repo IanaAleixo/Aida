@@ -4,12 +4,22 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/icone_launcher"
+        android:label="Meu app"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tcc_app">
-        <activity android:name=".MainActivity">
+        <activity android:name=".CadastroActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ConfiguracaoActivity"/>
+        <activity android:name=".TelaPrincipalActivity"/>
+        <activity android:name=".TelaPerfilActivity"/>
+        <activity android:name=".EditarPerfilActivity"/>
+        <activity android:name=".TelaAlterarSenhaActivity"/>
+        <activity android:name=".TelaEsqueceuSenhaActivity"/>
+        <activity android:name=".LogoffActivity"/>
+        <activity android:name=".TelaRelatoriosActivity"/>
+        <activity android:name=".BemVindoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
