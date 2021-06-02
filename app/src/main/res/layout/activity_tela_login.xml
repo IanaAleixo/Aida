@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:background="@color/white">
 
     <TextView
@@ -95,8 +95,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="173dp"
         android:background="@drawable/style_btn"
-        android:borderRadius="20dp"
         android:gravity="center_horizontal|top"
+        android:onClick="efetuarLogin"
         android:text="Log In"
         android:textAlignment="center"
         android:textColor="@android:color/white"
@@ -109,6 +109,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="45dp"
         android:layout_marginBottom="114dp"
+        android:onClick="esqueceuSenha"
         android:text="Esqueceu sua senha?"
         android:textColor="@color/black"
         android:textSize="20dp" />

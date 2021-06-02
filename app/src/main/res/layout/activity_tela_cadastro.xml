@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".CadastroActivity"
     android:background="@color/white">
 
     <TextView
@@ -50,7 +50,6 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="174dp"
         android:layout_marginRight="17dp"
-        android:textSizeHint="20dp"
         android:background="@drawable/style_edit_text"
         android:ems="10"
         android:inputType="text" />
@@ -155,8 +154,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="79dp"
         android:background="@drawable/style_btn"
-        android:borderRadius="20dp"
         android:gravity="center_horizontal|top"
+        android:onClick="efetuarCadastro"
         android:text="Cadastrar"
         android:textAlignment="center"
         android:textColor="@android:color/white"
@@ -170,7 +169,6 @@
         android:layout_marginLeft="230dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="520dp"
-        android:clipToOutline="true"
         android:src="@drawable/logo_facebook" />
 
     <ImageButton
@@ -181,7 +179,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="137dp"
         android:layout_marginTop="514dp"
-        android:clipToOutline="true"
         android:src="@drawable/logo_google" />
 
     <Button
@@ -191,6 +188,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="45dp"
+        android:onClick="fazerLogin"
         android:text="Já tem cadastro? Então faça Login"
         android:textColor="#4169E1"
         android:textSize="20dp" />

@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaAlterarSenhaActivity"
+    tools:context=".CadastroActivity"
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/fundo_azul_as"
+        android:id="@+id/fundoAzul"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_branco_as"
+            android:id="@+id/fundoBranco"
             android:layout_width="380dp"
             android:layout_height="470dp"
             android:layout_alignParentLeft="true"
@@ -128,7 +128,6 @@
                 android:layout_marginLeft="17dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="15dp"
-                android:onClick="alterarSenha"
                 android:text="Alterar"
                 android:background="@drawable/style_btn"/>
 

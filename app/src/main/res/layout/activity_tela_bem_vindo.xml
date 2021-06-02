@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".BemVindoActivity"
     android:background="@color/white">
 
+
     <LinearLayout
-        android:id="@+id/fundo_azul"
+        android:id="@+id/fundoAzul"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -22,7 +23,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_branco"
+            android:id="@+id/fundoBranco"
             android:layout_width="380dp"
             android:layout_height="363dp"
             android:layout_alignParentLeft="true"
@@ -35,7 +36,7 @@
 
 
             <TextView
-                android:id="@+id/bem_vindo"
+                android:id="@+id/bemVindo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -48,7 +49,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textoBemVindo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -58,6 +59,16 @@
                 android:text="Aqui haverá um texto explicando o objetivo do App, seus beneficios e suas limitações"
                 android:textColor="@android:color/black"
                 android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/btnProximo"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="170dp"
+                android:layout_marginLeft="300dp"
+                android:onClick="onItemClick"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icone_seta" />
 
 
         </LinearLayout>

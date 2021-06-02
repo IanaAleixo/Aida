@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".EditarPerfilActivity"
     android:background="@color/white">
 
     <LinearLayout
@@ -91,7 +91,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="7dp"
             android:layout_marginRight="17dp"
-            android:textSizeHint="20dp"
             android:background="@drawable/style_edit_text"
             android:inputType="text" />
 
@@ -130,6 +129,7 @@
             android:layout_marginLeft="201.5dp"
             android:layout_marginRight="5.5dp"
             android:layout_marginTop="50dp"
+            android:onClick="editAlterarSenha"
             android:text="Alterar senha"
             android:background="@drawable/style_btn"/>
 
@@ -140,6 +140,7 @@
             android:layout_marginLeft="17dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="15dp"
+            android:onClick="salvarEditPerfil"
             android:text="Salvar"
             android:background="@drawable/style_btn"/>
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".TelaPerfilActivity"
     android:background="@color/white">
 
     <LinearLayout
@@ -77,6 +77,7 @@
             android:layout_width="235dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:onClick="editarPerfil"
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/icone_lapis"
             android:text="Editar perfil"
@@ -87,6 +88,7 @@
             android:layout_width="241dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:onClick="verConfiguracao"
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/icone_configuracao"
             android:text="Configuração"
@@ -97,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:onClick="verRelatorios"
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/icone_grafico"
             android:text="Visualizar Relatórios"
@@ -107,6 +110,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:onClick="fazerLogoff"
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/icone_logoff"
             android:text="Sair"
