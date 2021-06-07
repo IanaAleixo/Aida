@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".controller.ContatoCVVActivity"
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/fundo_azul_cvv"
+        android:id="@+id/fundoAzul"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -22,13 +22,13 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_branco_cvv"
+            android:id="@+id/fundoBranco"
             android:layout_width="380dp"
             android:layout_height="508dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="17dp"
-            android:layout_marginTop="135dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="17dp"
             android:background="@drawable/style_fundo_branco"
             android:orientation="vertical">
@@ -62,13 +62,24 @@
                 android:textColor="@android:color/black"
                 android:textSize="20dp" />
 
-            <vector
-                android:width="343dp"
-                android:height="37.86dp"
-                android:viewportWidth="343"
-                android:viewportHeight="37.86"
-                >
+            <Button
+                android:id="@+id/btnContatoCVVSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/icone_bolinha"
+                android:text="Acesse: https://www.cvv.org.br/"
+                android:textColor="@color/black" />
 
+            <Button
+                android:id="@+id/btnContatoCVVTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/icone_bolinha"
+                android:text="Ligue: 188"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 

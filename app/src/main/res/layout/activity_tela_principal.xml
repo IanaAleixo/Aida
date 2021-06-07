@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaPrincipalActivity"
+    tools:context=".controller.TelaPrincipalActivity"
     android:background="@color/white">
 
     <LinearLayout
@@ -49,7 +49,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="32dp"
-                android:text="Olá, "
+                android:text="Olá, Iana "
                 android:textColor="@android:color/white"
                 android:textSize="30dp" />
 
@@ -67,6 +67,25 @@
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/imagemEmoji"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            app:srcCompat="@drawable/imagem_emoji" />
+
+        <Button
+            android:id="@+id/btnContatoCVV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="34dp"
+            android:background="@android:color/transparent"
+            android:onClick="contatoCVV"
+            android:text="Precisando conversar? Veja informações sobre o Centro de Valorização da Vida (CVV)"
+            android:textColor="#4169E1"
+            android:textSize="15dp" />
 
 
     </LinearLayout>

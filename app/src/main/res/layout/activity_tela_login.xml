@@ -3,116 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".controller.LoginActivity"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/loginLabel"
-        android:layout_width="363dp"
-        android:layout_height="97dp"
+    <LinearLayout
+        android:id="@+id/fundoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginRight="32dp"
-        android:gravity="center_vertical"
-        android:padding="5dp"
-        android:text="Log In"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@android:color/black"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/emailLoginLabel"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="171dp"
-        android:layout_marginRight="21dp"
-        android:text="Email:"
-        android:textColor="@android:color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/emailLoginCampo"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="227dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/style_edit_text"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/senhaLoginLabel"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="301dp"
-        android:layout_marginRight="21dp"
-        android:text="Senha:"
-        android:textColor="@android:color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/senhaLoginCampo"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="358dp"
-        android:layout_marginRight="21dp"
-        android:background="@drawable/style_edit_text"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="461dp"
-        android:layout_height="63dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="577dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="173dp"
-        android:background="@drawable/style_btn"
-        android:gravity="center_horizontal|top"
-        android:onClick="efetuarLogin"
-        android:text="Log In"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="25dp" />
+        android:background="#4169E1"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnEsqueceuSuaSenha"
-        android:layout_width="320dp"
-        android:layout_height="25dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="45dp"
-        android:layout_marginBottom="114dp"
-        android:onClick="esqueceuSenha"
-        android:text="Esqueceu sua senha?"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
+        <LinearLayout
+            android:id="@+id/fundoBranco"
+            android:layout_width="380dp"
+            android:layout_height="513dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/loginLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="125dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Log In"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/emailLoginCampo"
+                android:layout_width="343dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+
+
+            <EditText
+                android:id="@+id/senhaLoginCampo"
+                android:layout_width="343dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="21dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/hint_senha"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="350dp"
+                android:layout_height="63dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/style_btn"
+                android:gravity="center_horizontal|top"
+                android:onClick="efetuarLogin"
+                android:text="Log In"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btnEsqueceuSuaSenha"
+                android:layout_width="320dp"
+                android:layout_height="37dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:onClick="esqueceuSenha"
+                android:text="Esqueceu sua senha?"
+                android:textColor="#4169E1"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

@@ -7,7 +7,7 @@
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/fundo_azul"
+        android:id="@+id/fundoAzul"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -22,13 +22,13 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_branco"
+            android:id="@+id/fundoBranco"
             android:layout_width="380dp"
             android:layout_height="470dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="17dp"
-            android:layout_marginTop="145dp"
+            android:layout_marginTop="120dp"
             android:layout_marginRight="17dp"
             android:background="@drawable/style_fundo_branco"
             android:orientation="vertical">

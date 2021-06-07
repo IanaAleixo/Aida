@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BemVindoActivity"
+    tools:context=".controller.BemVindoActivity"
     android:background="@color/white">
 
 
@@ -25,11 +25,11 @@
         <LinearLayout
             android:id="@+id/fundoBranco"
             android:layout_width="380dp"
-            android:layout_height="363dp"
+            android:layout_height="450dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="17dp"
-            android:layout_marginTop="201dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="17dp"
             android:background="@drawable/style_fundo_branco"
             android:orientation="vertical">
@@ -53,10 +53,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="32dp"
                 android:gravity="center_horizontal|top"
-                android:text="Aqui haverá um texto explicando o objetivo do App, seus beneficios e suas limitações"
+                android:justificationMode="inter_word"
+                android:text="Segundo a OMS, a depressão pode atingir cerca de 300 milhões de pessoas no mundo, sendo que sua avaliação e diagnóstico são imprecisos, com apenas 3 a 49% dos casos sendo diagnosticados por médicos da atenção primária "
                 android:textColor="@android:color/black"
                 android:textSize="20dp" />
 
@@ -64,8 +65,8 @@
                 android:id="@+id/btnProximo"
                 android:layout_width="69dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="170dp"
-                android:layout_marginLeft="300dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginLeft="290dp"
                 android:onClick="onItemClick"
                 android:background="@android:color/transparent"
                 android:src="@drawable/icone_seta" />
