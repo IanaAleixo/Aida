@@ -9,17 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tcc_app">
-        <activity android:name=".CadastroActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".ConfiguracaoActivity"/>
-        <activity android:name=".TelaPrincipalActivity"/>
-        <activity android:name=".TelaPerfilActivity"/>
-        <activity android:name=".EditarPerfilActivity"/>
-        <activity android:name=".TelaAlterarSenhaActivity"/>
-        <activity android:name=".TelaEsqueceuSenhaActivity"/>
-        <activity android:name=".LogoffActivity"/>
-        <activity android:name=".TelaRelatoriosActivity"/>
-        <activity android:name=".BemVindoActivity">
+        <activity android:name=".controller.CadastroActivity"/>
+        <activity android:name=".controller.LoginActivity"/>
+        <activity android:name=".controller.ConfiguracaoPart1Activity"/>
+        <activity android:name=".controller.ConfiguracaoPart2Activity"/>
+        <activity android:name=".controller.TelaPrincipalActivity"/>
+        <activity android:name=".controller.TelaPerfilActivity"/>
+        <activity android:name=".controller.EditarPerfilActivity"/>
+        <activity android:name=".controller.TelaAlterarSenhaActivity"/>
+        <activity android:name=".controller.TelaEsqueceuSenhaActivity"/>
+        <activity android:name=".controller.LogoffActivity"/>
+        <activity android:name=".controller.TelaAcessoRelatorioActivity"/>
+        <activity android:name=".controller.ContatoCVVActivity"/>
+        <activity android:name=".controller.TelaRelatorioCalendarioActivity"/>
+        <activity android:name=".controller.TelaRelatorioGraficoActivity"/>
+        <activity android:name=".controller.BemVindoPart2Activity"/>
+        <activity android:name=".controller.BemVindoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
