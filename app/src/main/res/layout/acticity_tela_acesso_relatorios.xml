@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.TelaAcessoRelatorioActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/fundoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4169E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fundoBranco"
+            android:layout_width="380dp"
+            android:layout_height="350dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:text="Relatórios"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textoCvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:text="Qual tipo de relatório gostaria de acessar?"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnRelatorioCalendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/icone_bolinha"
+                android:text="Relatório Calendário"
+                android:onClick="acessoRelatorioCalendario"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnRelatorioGrafico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/icone_bolinha"
+                android:text="Relatório Gráfico"
+                android:onClick="acessoRelatorioGrafico"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

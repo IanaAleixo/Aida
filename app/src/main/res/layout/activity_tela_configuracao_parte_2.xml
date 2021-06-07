@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroActivity"
+    tools:context=".controller.ConfiguracaoPart2Activity"
     android:background="@color/white">
 
     <LinearLayout
@@ -24,19 +24,19 @@
         <LinearLayout
             android:id="@+id/fundoBranco"
             android:layout_width="380dp"
-            android:layout_height="470dp"
+            android:layout_height="600dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="17dp"
-            android:layout_marginTop="145dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="17dp"
             android:background="@drawable/style_fundo_branco"
             android:orientation="vertical">
 
 
             <TextView
-                android:id="@+id/senhaAtualLabel"
-                android:layout_width="211dp"
+                android:id="@+id/emailLabel"
+                android:layout_width="341dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -44,13 +44,45 @@
                 android:layout_marginLeft="27dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="59dp"
-                android:text="Senha atual"
+                android:text="Gostaria de receber e-mails se, por um acaso deixe de inserir informações no aplicativo?"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/simEmailcheckBox"
+                android:layout_width="71dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Sim" />
+
+            <CheckBox
+                android:id="@+id/naoEmailcheckBox"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Não" />
+
+            <TextView
+                android:id="@+id/qntDiasEmailLabel"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Se sim, após quantos dias sem inserção, gostaria de receber contato através de email?"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/senhaAtualCampo"
+                android:id="@+id/qntDiasEmailCampo"
                 android:layout_width="285dp"
                 android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
@@ -61,11 +93,13 @@
                 android:layout_marginRight="17dp"
                 android:background="@drawable/style_edit_text"
                 android:ems="10"
-                android:inputType="textPassword"/>
+                android:inputType="text"/>
+
+
 
             <TextView
-                android:id="@+id/novaSenhaLabel"
-                android:layout_width="211dp"
+                android:id="@+id/dicasLabel"
+                android:layout_width="314dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -73,62 +107,38 @@
                 android:layout_marginLeft="27dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="59dp"
-                android:text="Nova senha"
+                android:text="Gostaria de receber dicas para aprender a cuidar melhor da sua saúde mental?"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/novaSenhaCampo"
-                android:layout_width="285dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
+            <CheckBox
+                android:id="@+id/simDicasCheckBox"
+                android:layout_width="71dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="27dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="17dp"
-                android:background="@drawable/style_edit_text"
-                android:ems="10"
-                android:inputType="textPassword"/>
-
-            <TextView
-                android:id="@+id/confirmarSenhaLabel"
-                android:layout_width="211dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginLeft="27dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="59dp"
-                android:text="Confirmar nova senha"
-                android:textColor="@android:color/black"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:text="Sim" />
 
-            <EditText
-                android:id="@+id/confirmarSenhaCampo"
-                android:layout_width="285dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
+            <CheckBox
+                android:id="@+id/naoDicasCheckBox"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="27dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="17dp"
-                android:background="@drawable/style_edit_text"
-                android:ems="10"
-                android:inputType="textPassword"/>
+                android:textSize="20dp"
+                android:text="Não" />
+
 
             <Button
-                android:id="@+id/btnAlterar"
+                android:id="@+id/btnSalvarConf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="15dp"
-                android:text="Alterar"
+                android:onClick="salvarConf"
+                android:text="Salvar"
                 android:background="@drawable/style_btn"/>
 
         </LinearLayout>

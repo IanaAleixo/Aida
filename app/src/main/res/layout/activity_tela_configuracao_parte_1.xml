@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.ConfiguracaoPart1Activity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/fundoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4169E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fundoBranco"
+            android:layout_width="380dp"
+            android:layout_height="600dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/alertaLabel"
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Gostaria de receber alertas?"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/simAlertacheckBox"
+                android:layout_width="71dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Sim" />
+
+            <CheckBox
+                android:id="@+id/naoAlertacheckBox"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Não" />
+
+            <TextView
+                android:id="@+id/qntAlertaLabel"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Se sim, qual quantidade de alertas seria o suficiente para você?"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/qntAlertaCampo"
+                android:layout_width="285dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/watchListLabel"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Gostaria de cadastrar WatchList?"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/simWacthListheckBox"
+                android:layout_width="71dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Sim" />
+
+            <CheckBox
+                android:id="@+id/naoWatchListcheckBox"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="20dp"
+                android:text="Não" />
+
+            <TextView
+                android:id="@+id/cadastroWacthListLabel"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="59dp"
+                android:text="Se sim, nos informe o email para contato"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cadastroWacthListCampo"
+                android:layout_width="285dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/btnProximoConf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="15dp"
+                android:onClick="proximaTelaConfiguracao"
+                android:text="Próximo"
+                android:background="@drawable/style_btn"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

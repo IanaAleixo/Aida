@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.BemVindoPart2Activity"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/fundoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4169E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fundoBranco"
+            android:layout_width="380dp"
+            android:layout_height="450dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/style_fundo_branco"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/bemVindo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:text="Bem-vindo!"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textoBemVindo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal|top"
+                android:justificationMode="inter_word"
+                android:text="Com isso, nós do aplicativo (nome a ser definido) temos como principal objetivo detectar indícios de depressão para que assim, mais pessoas possam procurar especialistas e terem seu diagnóstico e tratamento adequado. "
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/btnProximo"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:layout_marginLeft="290dp"
+                android:onClick="onItemClick"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icone_seta" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
