@@ -1,4 +1,4 @@
-package com.ifba.tcc_app;
+package com.ifba.tcc_app.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+import com.ifba.tcc_app.R;
 
 public class BemVindoActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class BemVindoActivity extends AppCompatActivity {
 
     }
     public void onItemClick(View view){
-        Intent intent = new Intent(this, CadastroActivity.class);
+        Intent intent = new Intent(this, BemVindoPart2Activity.class);
         startActivity(intent);
     }
 

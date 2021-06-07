@@ -1,10 +1,12 @@
-package com.ifba.tcc_app;
+package com.ifba.tcc_app.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ifba.tcc_app.R;
 
 public class TelaPerfilActivity extends AppCompatActivity {
 
@@ -20,12 +22,12 @@ public class TelaPerfilActivity extends AppCompatActivity {
     }
 
     public void verConfiguracao(View view){
-        Intent intent = new Intent(this, ConfiguracaoActivity.class);
+        Intent intent = new Intent(this, ConfiguracaoPart1Activity.class);
         startActivity(intent);
     }
 
     public void verRelatorios(View view){
-        Intent intent = new Intent(this, TelaRelatoriosActivity.class);
+        Intent intent = new Intent(this, TelaAcessoRelatorioActivity.class);
         startActivity(intent);
     }
 

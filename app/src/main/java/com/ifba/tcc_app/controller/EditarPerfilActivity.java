@@ -1,10 +1,12 @@
-package com.ifba.tcc_app;
+package com.ifba.tcc_app.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ifba.tcc_app.R;
 
 public class EditarPerfilActivity extends AppCompatActivity {
 

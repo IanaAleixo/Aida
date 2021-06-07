@@ -1,4 +1,4 @@
-package com.ifba.tcc_app;
+package com.ifba.tcc_app.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,22 +6,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
+import com.ifba.tcc_app.R;
 
-    @Override
+public class ConfiguracaoPart2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_login);
+        setContentView(R.layout.activity_tela_configuracao_parte_2);
     }
-
-    public void efetuarLogin(View view){
+    public void salvarConf(View view){
         Intent intent = new Intent(this, TelaPrincipalActivity.class);
         startActivity(intent);
     }
-
-    public void esqueceuSenha(View view){
-        Intent intent = new Intent(this, TelaEsqueceuSenhaActivity.class);
-        startActivity(intent);
-    }
-
 }
