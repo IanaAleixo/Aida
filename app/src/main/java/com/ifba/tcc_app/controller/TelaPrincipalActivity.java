@@ -10,6 +10,7 @@ import com.ifba.tcc_app.GiphyHttpConexao;
 import com.ifba.tcc_app.ParserJsonGif;
 import com.ifba.tcc_app.R;
 import com.ifba.tcc_app.model.Gif;
+import com.ifba.tcc_app.model.Usuario;
 
 import org.json.JSONException;
 
@@ -25,12 +26,22 @@ import android.widget.TextView;
 
 
 public class TelaPrincipalActivity extends AppCompatActivity {
+    public TextView nomeUsuario;
     public String palavraChave;
+    private UsuarioDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_principal);
+
+        dao = new UsuarioDAO(this);
+
+        nomeUsuario = findViewById(R.id.nomeUsuarioLabel);
+        Usuario usuario = getIntent().getParcelableExtra("usuario");
+        String nome = usuario.getNome();
+        nomeUsuario.setText(nome);
+
     }
 
     public void verPerfil(View view){

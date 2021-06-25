@@ -44,12 +44,22 @@
 
             <TextView
                 android:id="@+id/nomePerfilLabel"
-                android:layout_width="342dp"
-                android:layout_height="54dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="32dp"
-                android:text="Olá, Iana "
+                android:text="Olá,  "
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/nomeUsuarioLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="32dp"
                 android:textColor="@android:color/white"
                 android:textSize="30dp" />
 
