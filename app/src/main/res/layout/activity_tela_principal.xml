@@ -1,103 +1,177 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".controller.TelaPrincipalActivity"
-    android:background="@color/white">
+    tools:visibility="visible">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fundo_azul"
-            android:layout_width="422dp"
-            android:layout_height="245dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="-1dp"
-            android:layout_marginTop="-24dp"
-            android:background="#4169E1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="131dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/fundo_azul"
+                android:layout_width="422dp"
+                android:layout_height="245dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:onClick="verPerfil"
-                android:background="@android:color/transparent"
-                android:layout_marginLeft="280dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="32dp"
-                android:src="@drawable/icone_perfil" />
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="-24dp"
+                android:background="#4169E1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="verPerfil"
+                    android:src="@drawable/icone_perfil" />
+
+                <TextView
+                    android:id="@+id/nomePerfilLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="32dp"
+                    android:text="Olá,  "
+                    android:textColor="@android:color/white"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/nomeUsuarioLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginRight="32dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="30dp" />
+
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/nomePerfilLabel"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="32dp"
-                android:text="Olá,  "
-                android:textColor="@android:color/white"
-                android:textSize="30dp" />
+                android:text="Como você está se sentindo?"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@android:color/white"
+                    app:columnCount="3"
+                    tools:visibility="visible">
 
-            <TextView
-                android:id="@+id/nomeUsuarioLabel"
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/feliz"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/alegre"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/amor"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/esperanca"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/triste"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/medo"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/solidao"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sono"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:padding="10dp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/raiva"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp" />
+
+                </androidx.gridlayout.widget.GridLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btnContatoCVV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="75dp"
-                android:layout_marginTop="-40dp"
-                android:layout_marginRight="32dp"
-                android:textColor="@android:color/white"
-                android:textSize="30dp" />
-
-
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="34dp"
+                android:background="@android:color/transparent"
+                android:onClick="contatoCVV"
+                android:text="Precisando conversar? Veja informações sobre o Centro de Valorização da Vida (CVV)"
+                android:textColor="#4169E1"
+                android:textSize="15dp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginLeft="16dp"
-            android:text="Como você está se sentindo?"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:textSize="25dp" />
-
-        <ImageView
-            android:id="@+id/imagemEmoji"
-            android:layout_width="match_parent"
-            android:layout_height="259dp"
-            app:srcCompat="@drawable/imagem_emoji" />
-
-        <Button
-            android:id="@+id/btnContatoCVV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="34dp"
-            android:background="@android:color/transparent"
-            android:onClick="contatoCVV"
-            android:text="Precisando conversar? Veja informações sobre o Centro de Valorização da Vida (CVV)"
-            android:textColor="#4169E1"
-            android:textSize="15dp" />
-
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
