@@ -67,7 +67,6 @@
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/icone_bolinha"
                 android:text="Relatório Calendário"
-                android:onClick="acessoRelatorioCalendario"
                 android:textColor="@color/black" />
 
             <Button
@@ -77,8 +76,16 @@
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/icone_bolinha"
                 android:text="Relatório Gráfico"
-                android:onClick="acessoRelatorioGrafico"
                 android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/gph_ic_back" />
 
         </LinearLayout>
 

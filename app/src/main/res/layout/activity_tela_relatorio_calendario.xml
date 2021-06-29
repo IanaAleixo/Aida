@@ -42,15 +42,26 @@
                 android:textColor="@android:color/white"
                 android:textSize="30dp" />
 
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="-100dp"
+                app:srcCompat="@drawable/gph_ic_back" />
 
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imagemCalendario"
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/imagem_calendario" />
+            android:layout_height="match_parent"
+            app:selectionLabelColor="@color/black"
+            app:selectionColor="#4169E1">
+
+        </com.applandeo.materialcalendarview.CalendarView>
 
 
     </LinearLayout>

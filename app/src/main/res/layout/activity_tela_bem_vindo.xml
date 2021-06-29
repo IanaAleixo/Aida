@@ -69,7 +69,8 @@
                 android:layout_marginLeft="290dp"
                 android:onClick="onItemClick"
                 android:background="@android:color/transparent"
-                android:src="@drawable/icone_seta" />
+                android:rotation="180"
+                android:src="@drawable/gph_ic_back" />
 
 
         </LinearLayout>

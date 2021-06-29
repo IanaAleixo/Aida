@@ -63,6 +63,15 @@
                 android:text="Alterar foto"
                 android:textColor="@color/black" />
 
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="-185dp"
+                app:srcCompat="@drawable/gph_ic_back" />
+
 
         </LinearLayout>
 
