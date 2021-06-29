@@ -45,7 +45,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.giphy.sdk:ui:2.1.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.facebook.fresco:fresco:2.5.0'
@@ -54,6 +54,8 @@ dependencies {
     compile 'com.facebook.fresco:animated-webp:1.2.0'
     compile 'com.facebook.fresco:webpsupport:1.2.0'
     compile 'com.facebook.fresco:webpsupport:1.2.0'
+    implementation 'org.naishadhparmar.zcustomcalendar:zcustomcalendar:1.0.1'
+    compile 'com.applandeo:material-calendar-view:1.4.0'
 
 
 }

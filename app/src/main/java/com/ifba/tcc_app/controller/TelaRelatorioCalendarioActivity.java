@@ -30,7 +30,7 @@ public class TelaRelatorioCalendarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_relatorio_calendario);
-        
+
         btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
