@@ -17,7 +17,7 @@ public class ConfiguracaoDAO {
         db = conexao.getWritableDatabase();
     }
 
-    public long inserir(Configuracao configuracao){
+    public long insert(Configuracao configuracao){
         ContentValues values = new ContentValues();
         values.put("alerta", configuracao.isAlerta());
         values.put("qnt_alerta", configuracao.getQtnAlerta());

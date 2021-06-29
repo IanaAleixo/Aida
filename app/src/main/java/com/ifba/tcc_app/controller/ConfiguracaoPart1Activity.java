@@ -117,7 +117,7 @@ public class ConfiguracaoPart1Activity extends AppCompatActivity {
         else configuracao.setWatchList(false);
         configuracao.setIdUsuario(usuario.getId());
 
-        dao.inserir(configuracao);
+        dao.insert(configuracao);
 
         Intent intent = new Intent(this, ConfiguracaoPart2Activity.class);
         intent.putExtra("usuario", usuario);
