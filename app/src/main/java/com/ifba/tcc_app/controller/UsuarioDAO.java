@@ -16,7 +16,7 @@ public class UsuarioDAO {
         db = conexao.getWritableDatabase();
     }
 
-    public long inserir(Usuario usuario){
+    public long insert(Usuario usuario){
         ContentValues values = new ContentValues();
         values.put("nome", usuario.getNome());
         values.put("email", usuario.getEmail());

@@ -14,7 +14,9 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.ifba.tcc_app.GiphyHttpConexao;
 import com.ifba.tcc_app.ParserJsonGif;
 import com.ifba.tcc_app.R;
+import com.ifba.tcc_app.model.Categoria;
 import com.ifba.tcc_app.model.Gif;
+import com.ifba.tcc_app.model.Status;
 import com.ifba.tcc_app.model.Usuario;
 
 import org.json.JSONException;
@@ -26,14 +28,24 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 
 public class TelaPrincipalActivity extends AppCompatActivity {
-    public TextView nomeUsuario;
-    public String palavraChave;
+    private TextView nomeUsuario;
+    private ImageButton btnVerPerfil;
+    private Button btnContatoCVV;
     private UsuarioDAO dao;
+    private StatusDAO daoStatus;
+    private CategoriaDAO daoCategoria;
     public SimpleDraweeView gifImageTriste;
     public SimpleDraweeView gifImageFeliz;
     public SimpleDraweeView gifImageAlegre;
@@ -51,19 +63,13 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         Fresco.initialize(this);
         setContentView(R.layout.activity_tela_principal);
 
-        gifImageTriste = (SimpleDraweeView) findViewById(R.id.triste);
-        gifImageTriste.setController(
-                Fresco.newDraweeControllerBuilder()
-                        .setUri("https://media.giphy.com/media/i0lZAPw40F212/giphy.gif")
-                        .setAutoPlayAnimations(true)
-                        .build());
+        daoStatus = new StatusDAO(this);
 
-        gifImageAlegre = (SimpleDraweeView) findViewById(R.id.alegre);
-        gifImageAlegre.setController(
-                Fresco.newDraweeControllerBuilder()
-                        .setUri("https://media.giphy.com/media/F6PFPjc3K0CPe/giphy.gif")
-                        .setAutoPlayAnimations(true)
-                        .build());
+        nomeUsuario = findViewById(R.id.nomeUsuarioLabel);
+        Usuario usuario = getIntent().getParcelableExtra("usuario");
+        String nome = usuario.getNome();
+        nomeUsuario.setText(nome);
+
 
         gifImageFeliz = (SimpleDraweeView) findViewById(R.id.feliz);
         gifImageFeliz.setController(
@@ -72,26 +78,52 @@ public class TelaPrincipalActivity extends AppCompatActivity {
                         .setAutoPlayAnimations(true)
                         .build());
 
-        gifImageMedo = (SimpleDraweeView) findViewById(R.id.medo);
-        gifImageMedo.setController(
+
+        gifImageFeliz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(2);
+
+                Status status = new Status();
+                status.setSentimento("felicidade");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        gifImageAlegre = (SimpleDraweeView) findViewById(R.id.alegre);
+        gifImageAlegre.setController(
                 Fresco.newDraweeControllerBuilder()
-                        .setUri("https://media.giphy.com/media/bEVKYB487Lqxy/giphy.gif")
+                        .setUri("https://media.giphy.com/media/F6PFPjc3K0CPe/giphy.gif")
                         .setAutoPlayAnimations(true)
                         .build());
 
-        gifImageSolidao = (SimpleDraweeView) findViewById(R.id.solidao);
-        gifImageSolidao.setController(
-                Fresco.newDraweeControllerBuilder()
-                        .setUri("https://media.giphy.com/media/W0c3xcZ3F1d0EYYb0f/giphy.gif")
-                        .setAutoPlayAnimations(true)
-                        .build());
+        gifImageAlegre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
 
-        gifImageSono = (SimpleDraweeView) findViewById(R.id.sono);
-        gifImageSono.setController(
-                Fresco.newDraweeControllerBuilder()
-                        .setUri("https://media.giphy.com/media/l378AEZceMwWboAQE/giphy.gif")
-                        .setAutoPlayAnimations(true)
-                        .build());
+                Categoria categoria = new Categoria(2);
+
+                Status status = new Status();
+                status.setSentimento("alegria");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         gifImageAmor = (SimpleDraweeView) findViewById(R.id.amor);
         gifImageAmor.setController(
@@ -100,12 +132,154 @@ public class TelaPrincipalActivity extends AppCompatActivity {
                         .setAutoPlayAnimations(true)
                         .build());
 
+        gifImageAmor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(2);
+
+                Status status = new Status();
+                status.setSentimento("amor");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         gifImageEsperanca = (SimpleDraweeView) findViewById(R.id.esperanca);
         gifImageEsperanca.setController(
                 Fresco.newDraweeControllerBuilder()
                         .setUri("https://media.giphy.com/media/JULfVYQH3XkCxMV0QP/giphy.gif")
                         .setAutoPlayAnimations(true)
                         .build());
+
+        gifImageEsperanca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(2);
+
+                Status status = new Status();
+                status.setSentimento("esperança");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        gifImageTriste = (SimpleDraweeView) findViewById(R.id.triste);
+        gifImageTriste.setController(
+                Fresco.newDraweeControllerBuilder()
+                        .setUri("https://media.giphy.com/media/i0lZAPw40F212/giphy.gif")
+                        .setAutoPlayAnimations(true)
+                        .build());
+
+        gifImageTriste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(1);
+
+                Status status = new Status();
+                status.setSentimento("tristeza");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();;
+            }
+        });
+
+        gifImageMedo = (SimpleDraweeView) findViewById(R.id.medo);
+        gifImageMedo.setController(
+                Fresco.newDraweeControllerBuilder()
+                        .setUri("https://media.giphy.com/media/bEVKYB487Lqxy/giphy.gif")
+                        .setAutoPlayAnimations(true)
+                        .build());
+
+        gifImageMedo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(1);
+
+                Status status = new Status();
+                status.setSentimento("medo");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        gifImageSolidao = (SimpleDraweeView) findViewById(R.id.solidao);
+        gifImageSolidao.setController(
+                Fresco.newDraweeControllerBuilder()
+                        .setUri("https://media.giphy.com/media/W0c3xcZ3F1d0EYYb0f/giphy.gif")
+                        .setAutoPlayAnimations(true)
+                        .build());
+
+        gifImageSolidao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(1);
+
+                Status status = new Status();
+                status.setSentimento("solidão");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        gifImageSono = (SimpleDraweeView) findViewById(R.id.sono);
+        gifImageSono.setController(
+                Fresco.newDraweeControllerBuilder()
+                        .setUri("https://media.giphy.com/media/l378AEZceMwWboAQE/giphy.gif")
+                        .setAutoPlayAnimations(true)
+                        .build());
+
+        gifImageSono.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
+
+                Categoria categoria = new Categoria(1);
+
+                Status status = new Status();
+                status.setSentimento("sonolencia");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         gifImageRaiva = (SimpleDraweeView) findViewById(R.id.raiva);
         gifImageRaiva.setController(
@@ -114,21 +288,48 @@ public class TelaPrincipalActivity extends AppCompatActivity {
                         .setAutoPlayAnimations(true)
                         .build());
 
+        gifImageRaiva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date data = new Date();
+                String dataString = data.toString();
 
-        nomeUsuario = findViewById(R.id.nomeUsuarioLabel);
-        Usuario usuario = getIntent().getParcelableExtra("usuario");
-        String nome = usuario.getNome();
-        nomeUsuario.setText(nome);
+                Categoria categoria = new Categoria(1);
+
+                Status status = new Status();
+                status.setSentimento("raiva");
+                status.setData(dataString);
+                status.setCategoria(categoria);
+
+                long id = daoStatus.insert(status);
+
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnVerPerfil = findViewById(R.id.btnVerPerfil);
+        btnVerPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Usuario usuario = getIntent().getParcelableExtra("usuario");
+                Intent intent = new Intent(TelaPrincipalActivity.this, TelaPerfilActivity.class);
+                intent.putExtra("usuario", usuario);
+                startActivity(intent);
+            }
+        });
+
+        btnContatoCVV = findViewById(R.id.btnContatoCVV);
+        btnContatoCVV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaPrincipalActivity.this, ContatoCVVActivity.class);
+                Usuario usuario = getIntent().getParcelableExtra("usuario");
+                intent.putExtra("usuario", usuario);
+                startActivity(intent);
+            }
+        });
 
     }
 
-    public void verPerfil(View view){
-        Intent intent = new Intent(this, TelaPerfilActivity.class);
-        startActivity(intent);
-    }
-    public void contatoCVV(View view){
-        Intent intent = new Intent(this, ContatoCVVActivity.class);
-        startActivity(intent);
-    }
 
 }
