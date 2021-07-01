@@ -33,14 +33,22 @@
             android:background="@drawable/style_fundo_branco"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/gph_ic_back" />
 
             <TextView
                 android:id="@+id/cvv"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="100dp"
                 android:gravity="center_horizontal|top"
                 android:text="CVV"
                 android:textColor="@android:color/black"
@@ -55,6 +63,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="32dp"
                 android:gravity="center_horizontal|top"
+                android:justificationMode="inter_word"
                 android:text="O CVV – Centro de Valorização da Vida realiza apoio emocional e prevenção do suicídio,
                 atendendo voluntária e gratuitamente todas as pessoas que querem e precisam conversar,
                 sob total sigilo por telefone,
@@ -81,14 +90,7 @@
                 android:text="Ligue: 188"
                 android:textColor="@color/black" />
 
-            <ImageButton
-                android:id="@+id/btnVoltar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="50dp"
-                app:srcCompat="@drawable/gph_ic_back" />
+
 
         </LinearLayout>
 
