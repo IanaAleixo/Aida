@@ -33,6 +33,9 @@ public class Conexao extends SQLiteOpenHelper {
         db.execSQL("insert into categoria values (1,'negativo', 0)");
         db.execSQL("insert into categoria values (2,'positivo', 0)");
         db.execSQL("insert into categoria values (3,'neutro ', 0)");
+
+        db.execSQL("create table imagem_perfil(nome varchar (50), " + "imagem BLOB)");
+
     }
 
     @Override

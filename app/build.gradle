@@ -54,8 +54,7 @@ dependencies {
     compile 'com.facebook.fresco:animated-webp:1.2.0'
     compile 'com.facebook.fresco:webpsupport:1.2.0'
     compile 'com.facebook.fresco:webpsupport:1.2.0'
-    implementation 'org.naishadhparmar.zcustomcalendar:zcustomcalendar:1.0.1'
-    compile 'com.applandeo:material-calendar-view:1.4.0'
-
+    implementation 'com.github.billthefarmer:CustomCalendarView:v1.05'
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 
 }

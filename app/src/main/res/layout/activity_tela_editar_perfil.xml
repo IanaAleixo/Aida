@@ -30,11 +30,11 @@
             <TextView
                 android:id="@+id/editarPerfilLabel"
                 style="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="16dp"
                 android:text="Editar Perfil "
@@ -57,7 +57,7 @@
                 android:id="@+id/btnEditarFotoPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="125dp"
+                android:layout_marginLeft="145dp"
                 android:layout_marginRight="125dp"
                 android:background="@android:color/transparent"
                 android:text="Alterar foto"
@@ -138,18 +138,16 @@
             android:layout_marginLeft="201.5dp"
             android:layout_marginRight="5.5dp"
             android:layout_marginTop="50dp"
-            android:onClick="editAlterarSenha"
             android:text="Alterar senha"
             android:background="@drawable/style_btn"/>
 
         <Button
-            android:id="@+id/btnSalvarPerfiç"
+            android:id="@+id/btnSalvarPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="17dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="15dp"
-            android:onClick="salvarEditPerfil"
             android:text="Salvar"
             android:background="@drawable/style_btn"/>
 
