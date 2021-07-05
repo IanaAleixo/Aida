@@ -16,6 +16,7 @@ import com.ifba.tcc_app.ParserJsonGif;
 import com.ifba.tcc_app.R;
 import com.ifba.tcc_app.model.Categoria;
 import com.ifba.tcc_app.model.Gif;
+import com.ifba.tcc_app.model.Imagem;
 import com.ifba.tcc_app.model.Status;
 import com.ifba.tcc_app.model.Usuario;
 
@@ -38,12 +39,15 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+import static com.ifba.tcc_app.controller.EditarPerfilActivity.getImage;
+
 
 public class TelaPrincipalActivity extends AppCompatActivity {
     private TextView nomeUsuario;
     private ImageButton btnVerPerfil;
     private Button btnContatoCVV;
     private UsuarioDAO dao;
+    private ImagemDAO daoImagem;
     private StatusDAO daoStatus;
     private CategoriaDAO daoCategoria;
     public SimpleDraweeView gifImageTriste;
@@ -64,12 +68,12 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tela_principal);
 
         daoStatus = new StatusDAO(this);
+        daoImagem = new ImagemDAO(this);
 
         nomeUsuario = findViewById(R.id.nomeUsuarioLabel);
         Usuario usuario = getIntent().getParcelableExtra("usuario");
         String nome = usuario.getNome();
         nomeUsuario.setText(nome);
-
 
         gifImageFeliz = (SimpleDraweeView) findViewById(R.id.feliz);
         gifImageFeliz.setController(
@@ -94,7 +98,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -120,7 +124,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -147,7 +151,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -173,7 +177,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -199,7 +203,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();;
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();;
             }
         });
 
@@ -225,7 +229,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -251,7 +255,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -277,7 +281,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -303,7 +307,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
                 long id = daoStatus.insert(status);
 
-                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Status inserido com sucesso! ", Toast.LENGTH_SHORT).show();
             }
         });
 

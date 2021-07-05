@@ -28,14 +28,14 @@ public class UsuarioDAO {
     public Usuario select(int id){
 
         Cursor cursor = db.query("usuario", new String[] { "id",
-                        "nome", "email"}, "id" + "=?",
+                        "nome", "email", "senha"}, "id" + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
 
 
         Usuario usuario = new Usuario(cursor.getInt(0), cursor.getString(1),
-                cursor.getString(2));
+                cursor.getString(2), cursor.getString(3));
 
         return usuario;
     }
@@ -59,6 +59,15 @@ public class UsuarioDAO {
         ContentValues values = new ContentValues();
         values.put("nome", usuario.getNome());
         values.put("email", usuario.getEmail());
+        values.put("senha", usuario.getSenha());
+
+        // updating row
+        return db.update("usuario", values, "id" + " = ?",
+                new String[] { String.valueOf(usuario.getId()) });
+    }
+
+    public int updateSenha(Usuario usuario) {
+        ContentValues values = new ContentValues();
         values.put("senha", usuario.getSenha());
 
         // updating row

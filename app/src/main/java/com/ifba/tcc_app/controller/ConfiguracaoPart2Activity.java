@@ -103,7 +103,7 @@ public class ConfiguracaoPart2Activity extends AppCompatActivity {
 
         if (contatoEmail){
             configuracao.setReceberEmail(true);
-            configuracao.setQtnAlerta(Integer.parseInt(qntDiasContato.getText().toString()));
+            configuracao.setQtnDiasEmail(Integer.parseInt(qntDiasContato.getText().toString()));
         }
         else configuracao.setReceberEmail(false);
         if (dicas){

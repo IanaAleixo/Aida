@@ -11,9 +11,11 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,16 +29,24 @@ import com.ifba.tcc_app.model.Imagem;
 import com.ifba.tcc_app.model.Usuario;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class EditarPerfilActivity extends AppCompatActivity {
     private ImageView fotoUsuario;
     private Button btnEditarImagemPerfil;
     private Button btnAlterarSenha;
     private Button btnSalvarPerfil;
+    private Button btnFoto;
     private ImageButton btnVoltar;
-    private static final int RESULT_LOAD_IMAGE= 1;
-    private static final int PICK_IMAGE= 100;
+    private static final int RESULT_LOAD_IMAGE = 1;
+    private static final int PICK_IMAGE = 100;
     private ImagemDAO dao;
+    private UsuarioDAO daoUsuario;
+    private EditText nomePerfilCampo;
+    private EditText emailPerfilCampo;
+    private String fotoString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,23 +54,26 @@ public class EditarPerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tela_editar_perfil);
 
         Usuario usuario = getIntent().getParcelableExtra("usuario");
+        String senha = usuario.getSenha();
 
-
+        nomePerfilCampo = findViewById(R.id.nomePerfilCampo);
+        emailPerfilCampo = findViewById(R.id.emailPerfilCampo);
+        nomePerfilCampo.setText(usuario.getNome());
+        emailPerfilCampo.setText(usuario.getEmail());
         fotoUsuario = findViewById(R.id.fotoUsuario);
+
         dao = new ImagemDAO(this);
+        daoUsuario = new UsuarioDAO(this);
 
-        Imagem imagem = dao.select(usuario.getNome());
-
+        /*Imagem imagem = dao.select(usuario.getNome());
         if (imagem == null) {
             Uri imgUri = Uri.parse("android.resource://my.package.name/" + R.drawable.icone_perfil);
             fotoUsuario.setImageURI(imgUri);
 
-
         } else {
             Bitmap bitmap = getImage(imagem.getImagem());
             fotoUsuario.setImageBitmap(bitmap);
-
-        }
+        }*/
 
 
         btnVoltar = findViewById(R.id.btnVoltar);
@@ -74,16 +87,16 @@ public class EditarPerfilActivity extends AppCompatActivity {
             }
         });
 
-        btnEditarImagemPerfil = findViewById(R.id.btnEditarFotoPerfil);
-        btnEditarImagemPerfil.setOnClickListener(new View.OnClickListener() {
+        btnFoto = findViewById(R.id.btnFoto);
+        btnFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(EditarPerfilActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(EditarPerfilActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
+                if (ActivityCompat.checkSelfPermission(EditarPerfilActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(EditarPerfilActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
                     return;
                 }
-                Intent intent = new Intent(Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
 
                 //CÓDIGO TAMBÉM TESTADO
@@ -110,8 +123,15 @@ public class EditarPerfilActivity extends AppCompatActivity {
         btnSalvarPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EditarPerfilActivity.this, TelaPerfilActivity.class);
                 Usuario usuario = getIntent().getParcelableExtra("usuario");
+
+                Usuario user = daoUsuario.select(usuario.getId());
+                usuario.setNome(nomePerfilCampo.getText().toString());
+                usuario.setEmail(emailPerfilCampo.getText().toString());
+                usuario.setSenha(user.getSenha());
+                daoUsuario.update(usuario);
+
+                Intent intent = new Intent(EditarPerfilActivity.this, TelaPerfilActivity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
@@ -122,7 +142,7 @@ public class EditarPerfilActivity extends AppCompatActivity {
     // convert from bitmap to byte array
     public static byte[] getBytes(Bitmap bitmap) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        bitmap.compress(Bitmap.CompressFormat.PNG, 70, stream);
         return stream.toByteArray();
     }
 
@@ -141,12 +161,65 @@ public class EditarPerfilActivity extends AppCompatActivity {
             Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
             byte[] image = getBytes(bitmap);
             Usuario usuario = getIntent().getParcelableExtra("usuario");
-            Imagem imagem = new Imagem();
-            imagem.setNome(usuario.getNome());
-            imagem.setImagem(image);
             dao.insert(usuario.getNome(),image);
 
-            // O CÓDIGO ABAIXO É PARA O ONCREATE
+        /*if (requestCode == RESULT_LOAD_IMAGE) {
+            Uri selectedImageUri = dados.getData();
+            Bitmap fotoRegistrada = null;
+            try {
+                fotoRegistrada = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            fotoUsuario.setImageBitmap(fotoRegistrada);
+
+            byte[] fotoEmBytes;
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            fotoRegistrada.compress(Bitmap.CompressFormat.PNG, 70, stream);
+
+            fotoEmBytes = stream.toByteArray();
+            fotoString = Base64.encodeToString(fotoEmBytes, Base64.DEFAULT);
+
+            Usuario usuario = getIntent().getParcelableExtra("usuario");
+            dao.insert(usuario.getNome(), fotoString);*/
+
+
+            /*try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
+                fotoUsuario.setImageDrawable(new BitmapDrawable(bitmap));
+                btnFoto.setAlpha(0);
+
+                byte[] image = getBytes(bitmap);
+                Usuario usuario = getIntent().getParcelableExtra("usuario");
+                long id = dao.insert(usuario.getNome(),image);
+                Toast.makeText(getApplicationContext(), "Inseriu"+id, Toast.LENGTH_SHORT).show();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }*/
+
+            /*if (data != null) {
+                selectedImageUri = data.getData();
+                fotoUsuario.setImageURI(selectedImageUri);
+            }
+            InputStream inputStream = null;
+            try {
+                inputStream = getContentResolver().openInputStream(selectedImageUri);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Bitmap mImage = BitmapFactory.decodeStream(inputStream);
+            byte[] image = getBytes(mImage);
+            Usuario usuario = getIntent().getParcelableExtra("usuario");
+            Imagem imagem = new Imagem();
+            imagem.setImagem(image);
+            dao.insert(usuario.getNome(), image);*/
+        }
+
+        /**/
+
+        // O CÓDIGO ABAIXO É PARA O ONCREATE
             /*Imagem imagem = dao.select(usuario.getNome());
 
             if (imagem == null){
@@ -161,7 +234,6 @@ public class EditarPerfilActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "inseriu", Toast.LENGTH_SHORT).show();
 
             }*/
-        }
 
         //CÓDIGO TAMBÉM TESTADO
 
@@ -177,9 +249,8 @@ public class EditarPerfilActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"NOT Successfull",Toast.LENGTH_SHORT).show();
 
             } */
+    }
 
-
-        }
 
     public String getPath(Uri uri){
         if(uri == null) return null;

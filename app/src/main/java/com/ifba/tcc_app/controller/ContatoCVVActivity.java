@@ -54,7 +54,7 @@ public class ContatoCVVActivity extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ContatoCVVActivity.this, TelaAcessoRelatorioActivity.class);
+                Intent intent = new Intent(ContatoCVVActivity.this, TelaPrincipalActivity.class);
                 Usuario usuario = getIntent().getParcelableExtra("usuario");
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);

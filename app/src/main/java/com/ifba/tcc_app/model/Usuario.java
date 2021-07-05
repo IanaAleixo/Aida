@@ -93,4 +93,5 @@ public class Usuario implements Parcelable{
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
 }

@@ -18,11 +18,11 @@ public class ImagemDAO {
         db = conexao.getWritableDatabase();
     }
 
-    public void insert( String name, byte[] image) throws SQLiteException {
+    public long insert(String name, byte[] image) throws SQLiteException {
         ContentValues values = new  ContentValues();
         values.put("nome",    name);
         values.put("imagem",   image);
-        db.insert( "imagem_perfil", null, values );
+        return db.insert( "imagem_perfil", null, values );
     }
 
     //CÓDIGO TAMBÉM TESTADO
